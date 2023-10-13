@@ -1,8 +1,8 @@
 const tablinks = document.getElementsByClassName("tab-links");
 const tabContents = document.getElementsByClassName("tab-contents");
-// const closeMenu = document.getElementById("fa-xmark");
-// const openMenu = document.getElementById("fa-bars");
-
+const textArea = document.getElementById("textArea");
+const submitButton = document.getElementById("submitButton");
+const sidemenu = document.getElementById("sidemenu");
 
 const openTab = (tablink) =>{
     tablink.addEventListener("click", function(e){
@@ -31,14 +31,18 @@ for(tablink of tablinks){
     openTab(tablink)
 }
 
-// closeMenu.addEventListener("click", function(){
-//     alert("Harsh")
-// })
+window.addEventListener("load", ()=>{
+    textArea.value = ""
+})
 
-// openMenu.addEventListener("click", function(){
-//     alert("Harsh")
-// })
 
+function openmenu(){
+    sidemenu.style.right = "0";
+}
+
+function closemenu(){
+    sidemenu.style.right = "-200px";
+}
 
 
 

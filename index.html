@@ -11,24 +11,23 @@
 <body>
     <div id="header">
         <div class="container">
-            console.log("Hii")
                 <nav>
                 <h1><span>H</span>arsh.</h1>
                 <!-- <img src="images/logo.png" alt="" class="logo"> -->
-                <ul>
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times"></i>
+                <ul id="sidemenu">
+                    <li><a href="#header" onclick="closemenu()">Home</a></li>
+                    <li><a href="#about" onclick="closemenu()">About</a></li>
+                    <li><a href="#services" onclick="closemenu()">Services</a></li>
+                    <li><a href="#portfolio" onclick="closemenu()">Portfolio</a></li>
+                    <li><a href="#contact" onclick="closemenu()">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                     <!-- <i class="fas fa-solid fa-xmark"></i> -->
                 </ul>
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Web/Software Developer</p>
-                <h1>Hi, I'm <span>Harsh</span><br> Thakur From India</h1>
+                <h1>Hi, I'm <span>Harsh</span><br> From India</h1>
             </div>
         </div>
     </div>
@@ -57,8 +56,12 @@
                         <ul>
                             <li>HTML</li>
                             <li>CSS</li>
-                            <li>JAVASCRIPT</li>
                             <li>BOOTSTRAP</li>
+                            <li>JAVASCRIPT</li>
+                            <li>REACT</li>
+                            <li>NodeJS</li>
+                            <li>EXPRESS JS</li>
+                            <li>MONGODB</li>
                             <li>CORE JAVA</li>
                             <li>SQL</li>
                         </ul>
@@ -91,25 +94,41 @@
         <div class="services-list">
             <div>
                 <i class="fa-solid fa-code"></i>
-                <h2>Front-end Development</h2>
+                <h2>Front-end development</h2>
                 <p>
-                    As a front-end developer, my expertise lies in designing and developing engaging and responsive user interfaces that deliver exceptional user experiences. With proficiency in HTML, CSS, JavaScript, and other relevant front-end technologies, I have a proven track record of creating stunning and intuitive designs that meet the needs of clients and users alike. 
+                    As a frontend developer, I specialize in crafting engaging and user-centric web experiences. Leveraging my expertise in HTML, CSS,
+                    and JavaScript, I create seamless and visually appealing interfaces that captivate users from the moment they land on a website.
+                    With a keen eye for design and a focus on responsiveness, I ensure that websites not only look stunning on all devices but also
+                    provide intuitive and enjoyable navigation. Whether it's designing interactive elements, optimizing performance, or collaborating
+                    closely with designers and backend developers, I am dedicated to delivering front-end solutions that elevate brands and leave a
+                    lasting impression on users.
                 </p>   
             </div>
             <div>
                 <i class="fa-solid fa-code"></i>
                 <h2>Back-end development</h2>
                 <p>
-                    As a back-end developer, I possess expertise in creating and maintaining the server-side components of web applications. With a strong understanding of back-end programming languages such as Java, python, I have experience in developing APIs, creating and managing databases, and implementing scalable solutions for complex business logic. 
+                    As a backend developer, I specialize in building the robust and efficient foundations that power seamless web applications.
+                    Proficient in languages such as Node.js(with MongoDB) and Java(SQL DataBase), I design and implement the server-side logic that drives functionality,
+                     data management, and user interactions. From developing RESTful APIs and integrating third-party services to optimizing 
+                     database performance and ensuring data security, my focus is on creating scalable and reliable backend systems. 
+                     I thrive on solving complex challenges, collaborating with frontend teams, and continuously refining and enhancing the 
+                     technical architecture to support the dynamic needs of modern web applications.
                 </p>
             </div>
             <div>
                 <i class="fa-solid fa-code"></i>
-                <h2>Database Developement</h2>
+                <h2>Database developement</h2>
                 <p>
-                    As a database developer, I possess expertise in designing and developing high-performance databases that meet the specific needs of clients. With proficiency in database management systems such as MySQL and MongoDB
-                </p>
-            </div>
+                    As a database specialist, I excel in designing and managing the data ecosystems that drive the heart of web applications.
+                     With expertise in SQL and NoSQL databases such as MySQL, PostgreSQL, MongoDB, and more, I am adept at crafting efficient
+                      database structures that ensure seamless data storage, retrieval, and manipulation. From schema design and data
+                       normalization to implementing advanced querying and indexing strategies, I am dedicated to optimizing performance 
+                       and ensuring data integrity. My focus on scalability, security, and maintaining data consistency enables me to contribute
+                        to the development of robust and reliable applications. Whether it's structuring complex data relationships or 
+                        streamlining data access for applications.                </p>
+            
+                </div>
         </div>
     </div>
 </div>
@@ -118,39 +137,56 @@
 
 <div id="portfolio">
     <div class="container">
-      <h1 class="sub-title">My Work</h1>  
+      <h1 class="sub-title">My Projects</h1>  
       <div class="work-list">
+
         <div class="work">
             <img src="images/work-1.png" alt="">
+            <!-- <img src="images/forkify-img2.png" alt=""> -->
             <div class="layer">
-                <h3>Social Media App</h3>
-                <p>Lorem ipsum, dolor sit amet
-                  consectetur adipisicing elit. Esse, molestias.</p>
-                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <h3>Forkify</h3>
+                <p>Recipe search engine that considers user's dietary preferences and available ingredients.</p>
+                  <a href="https://forkify-harsh12062002.netlify.app"><i class="fa-solid fa-arrow-up-right-from-square"><div id="clickMe">Click Me</div></i></a>
             </div>
+            <div class="projectName">Forkify</div>
         </div>
+        
+
         <div class="work">
             <img src="images/work-2.png" alt="">
             <div class="layer">
-                <h3>Social Media App</h3>
-                <p>Lorem ipsum, dolor sit amet
-                  consectetur adipisicing elit. Esse, molestias.</p>
-                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <h3>Mapty</h3>
+                <p>Mapty a web based application, that lets users to effortlessly log and track their ftness progress.</p>
+                  <a href="https://mapty-harsh.netlify.app"><i class="fa-solid fa-arrow-up-right-from-square"><div id="clickMe">Click Me</div></i></a>
             </div>
+            <div class="projectName">Mapty</div>
         </div>
+
+
+        <div class="work">
+            <img src="images/work-1.png" alt="">
+            <div class="layer">
+                <h3>Banking Homepage</h3>
+                <p>Designed and developed a custom homepage for a bank</p>
+                  <a href="https://bankinghomepage.netlify.app"><i class="fa-solid fa-arrow-up-right-from-square"><div id="clickMe">Click Me</div></i></a>
+            </div>
+            <div class="projectName">Banking Homepage</div>
+        </div>
+
         <div class="work">
             <img src="images/work-3.png" alt="">
             <div class="layer">
-                <h3>Social Media App</h3>
-                <p>Lorem ipsum, dolor sit amet
-                  consectetur adipisicing elit. Esse, molestias.</p>
-                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <h3>React CRUD App</h3>
+                <p>Developed a functional and visually appealing CRUD (Create, Read, Update, Delete) application using React</p>
+                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"><div id="clickMe">Click Me</div></i></a>
             </div>
+            <div class="projectName">React CRUD App</div>
         </div>
-      </div>
-      <a href="#" class="btn">See more</a>
+      
+    </div>
     </div>
 </div>
+
 
 <!-- -----------------Contact ------------------- -->
 
@@ -163,21 +199,23 @@
                 <!-- <br> -->
                 <p><i class="fas fa-paper-plane"></i> thakurharsh201@gmail.com</p>
                 <!-- <br> -->
-                <p><i class="fas fa-phone-square-alt"></i> 934015655</p>
+                <p><i class="fa-solid fa-phone"></i> 934015655</p>
                 <div class="social-icons">
                     <!-- <a href=""><i class="fa-brands fa-facebook"></i></a> -->
                     <a href="https://www.instagram.com/son_of_beena_thakur/?next=%2F"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/in/harsh-thakur-361643210/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/HarshThakur1206"><i class="fa-brands fa-github"></i></a>
             </div>
             <!-- <button class="btn btn2">Download CV</button> -->
-            <a href="images/HarshThakur06.pdf" download="" class="btn btn2">Download CV</a>
+            <a href="images/HARSH12.pdf" download="" class="btn btn2">Download CV</a>
         </div>
         <div class="contact-right">
-            <form action="">
-                <input type="text" name="Name" placeholder="Your Name" id="">
-                <input type="email" name="email" placeholder="Your email" id="">
-                <textarea name="Message" rows="6" placeholder="Your Message" id="" cols="30" rows="10"></textarea>
-                <button class="btn btn2" type="submit">Submit</button>
+            <form action="https://formspree.io/f/xwkjaqdj" method="POST">
+                <input type="text" name="name" placeholder="Your name" id="" autocomplete="off" required>
+                <input type="email" name="email" placeholder="Your email" id="" autocomplete="off" required>
+                <input type="text" name="subject" placeholder="Subject" id="" autocomplete="off" required>
+                <textarea name="message" rows="6" placeholder="Your Message" id="textArea" cols="30" rows="10" required autocomplete="off"></textarea>
+                <button class="btn btn2" id="submitButton" type="submit" >Submit</button>
             </form>
         </div>
     </div>
